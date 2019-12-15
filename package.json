@@ -1,0 +1,39 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/ykulynych/blog.git",
+  "author": "Yura <yura.kulinich.ua@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "yarn lint && webpack-dev-server --hot",
+    "lint": "tslint -c tslint.json 'client/**/*.ts' 'client/**/*.tsx' 'server/**/*.ts'"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.7.5",
+    "@babel/preset-env": "^7.7.6",
+    "@babel/preset-react": "^7.7.4",
+    "@babel/preset-typescript": "^7.7.4",
+    "@types/react": "^16.9.16",
+    "@types/react-dom": "^16.9.4",
+    "babel-loader": "^8.0.6",
+    "fork-ts-checker-webpack-plugin": "^3.1.1",
+    "html-webpack-plugin": "^3.2.0",
+    "prettier": "^1.19.1",
+    "source-map-loader": "^0.2.4",
+    "tslint": "^5.20.1",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-plugin-prettier": "^2.0.1",
+    "tslint-react": "^4.1.0",
+    "typescript": "^3.7.3",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.9.0"
+  },
+  "dependencies": {
+    "@hot-loader/react-dom": "^16.11.0",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-hot-loader": "^4.12.18"
+  }
+}

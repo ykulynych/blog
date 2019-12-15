@@ -1,0 +1,23 @@
+# Logs
+logs
+*.log
+yarn-debug.log*
+yarn-error.log*
+
+# Lock files
+yarn.lock
+
+# mac files
+.DS_Store
+
+*.tern-port
+
+# Dependency directories
+node_modules/
+
+# Dist
+dist/
+
+# Misc
+tmp/
+*.tern-port

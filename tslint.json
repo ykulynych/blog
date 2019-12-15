@@ -1,0 +1,28 @@
+{
+    "defaultSeverity": "error",
+    "extends": [
+        "tslint:recommended",
+        "tslint-react",
+        "tslint-config-prettier"
+    ],
+    "jsRules": {},
+    "rulesDirectory": ["tslint-plugin-prettier"],
+    "rules": {
+        "prettier": true,
+        "jsx-alignment": true,
+        "jsx-ban-elements": [],
+        "jsx-ban-props": [],
+        "jsx-boolean-value": "always",
+        "jsx-curly-spacing": "never",
+        "jsx-equals-spacing": "never",
+        "jsx-key": true,
+        "jsx-no-bind": false,
+        "jsx-no-lambda": true,
+        "jsx-no-multiline-js": true,
+        "jsx-no-string-ref": true,
+        "jsx-use-translation-function": false,
+        "jsx-self-close": true,
+        "jsx-space-before-trailing-slash": true,
+        "jsx-wrap-multiline": false
+    }
+}
