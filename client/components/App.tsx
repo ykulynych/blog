@@ -1,6 +1,7 @@
 import React from 'react'
 import { hot } from 'react-hot-loader/root'
+import { Title } from './Title'
 
-const Component = () => <h1>Blog</h1>
+const Component = () => <Title />
 
 export const App = hot(Component)
