@@ -1,9 +1,10 @@
 import React from 'react'
-import { AppState } from './states'
+import * as States from './states'
 
 const context = {
-  appState: new AppState()
+  articlesState: new States.ArticlesState()
 }
 
 export type TAppContext = typeof context
+
 export const AppContext = React.createContext(context)

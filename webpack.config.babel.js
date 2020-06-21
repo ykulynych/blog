@@ -1,7 +1,7 @@
-const path = require('path');
-const webpack = require('webpack');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
+const path = require('path')
+const webpack = require('webpack')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin')
 
 module.exports = {
   mode: 'development',
@@ -39,7 +39,11 @@ module.exports = {
               '@babel/preset-typescript',
               '@babel/preset-react'
             ],
-            plugins: ['react-hot-loader/babel']
+            plugins: [
+              'react-hot-loader/babel',
+              ['@babel/plugin-proposal-decorators', { legacy: true }],
+              ['@babel/plugin-proposal-class-properties', { loose: true }]
+            ]
           }
         }
       },
@@ -60,4 +64,4 @@ module.exports = {
       filename: 'index.html'
     })
   ]
-};
+}

@@ -1,18 +1,25 @@
 import React from 'react'
+import * as R from 'ramda'
+import { Maybe } from 'monet'
 import { TAppContext } from '../AppContext'
 
-type ViewModal<V> = new (context: TAppContext, ...params: any[]) => V
+type TViewModal<V> = new (context: TAppContext, ...params: any[]) => V
 
 export function useVm<V>(
-  vm: ViewModal<V>,
+  vm: TViewModal<V>,
   context: TAppContext,
   ...params: any[]
 ): V {
   const vmRef = React.useRef<V | null>(null)
 
-  if (!vmRef.current) {
-    vmRef.current = new vm(context, ...params)
+  const initializeVm = () => new vm(context, ...params)
+  const assignVm = (initVm: V) => {
+    vmRef.current = initVm
   }
 
-  return vmRef.current
+  return Maybe.fromNull(vmRef.current)
+    .catchMap(
+      R.compose<V, V, Maybe<V>>(Maybe.of, R.tap(assignVm), initializeVm)
+    )
+    .some()
 }
