@@ -6,7 +6,8 @@
   "author": "Yura <yura.kulinich.ua@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "yarn lint && webpack-dev-server --hot",
+    "client-start:dev": "yarn lint && webpack-dev-server --hot",
+    "server-start:dev": "ts-node server/index.ts",
     "lint": "tslint -c tslint.json 'client/**/*.ts' 'client/**/*.tsx' 'server/**/*.ts'"
   },
   "devDependencies": {
@@ -36,6 +37,11 @@
     "@babel/plugin-proposal-class-properties": "^7.10.1",
     "@babel/plugin-proposal-decorators": "^7.10.1",
     "@hot-loader/react-dom": "^16.11.0",
+    "@marblejs/core": "^3.2.1",
+    "@marblejs/middleware-body": "^3.2.1",
+    "@marblejs/middleware-logger": "^3.2.1",
+    "chalk": "^4.1.0",
+    "fp-ts": "^2.6.6",
     "mobx": "^5.15.1",
     "mobx-react": "^6.1.4",
     "mobx-react-devtools": "^6.1.1",
@@ -47,6 +53,8 @@
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-hot-loader": "^4.12.18",
+    "rxjs": "^6.5.5",
+    "ts-node": "^8.10.2",
     "uuid": "^8.1.0"
   }
 }
